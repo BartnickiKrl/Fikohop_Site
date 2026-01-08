@@ -2,7 +2,7 @@ body {
     background-color: #ffcccc;
 }
 header {
-    background-image: url("img/header.jpg");
+    background-image: url("img/zdjheaderinne.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -29,7 +29,7 @@ nav {
     height: 100px;
     margin: auto;
     background-color:aliceblue;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 2px black;
 }
 nav a {
     flex: 1;
@@ -52,6 +52,7 @@ nav a {
 nav a:hover{
     background-color: #aabbff;
     color: #000;
+    border: none;
 }
 nav a:active {
     background-color: #aabbff;
