@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 body {
     background-color: #ffcccc;
 }
@@ -17,6 +19,14 @@ header {
     font-size: 1.5em;
     padding-left: 30px;
     padding-bottom: 0px;
+}
+
+header h1 {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 5rem;       
+    color: #1a1a4b;            
+    text-shadow: 4px 4px 2px rgb(255,255,255); 
+    text-align: center;
 }
 h1 {
     text-align: center;
@@ -38,14 +48,14 @@ nav a {
     justify-content: center;
 
     background-color:aliceblue;
-    color: #ffbbbb;
+    color: #1a1a4b;
     text-decoration: none;
     font-size: 2.5em;
     margin: auto;
     width: 100%;
     padding: 30px;
     height: 50px;
-    border: solid 2px;
+    border: solid 2px #ffbbbb;
 
     transition: 0.3s;
 }
@@ -58,4 +68,50 @@ nav a:active {
     background-color: #aabbff;
     border-radius: 10px;
     color: #fff;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: aliceblue;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 200px; /* elastyczne kolumny min. 200px */
+}
+
+.footer-section h2 {
+  font-family: 'Fredoka One', sans-serif;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #1a1a4b;
+}
+
+.footer-section h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #1a1a4b;
+  text-shadow: 1px 1px 1px black;
+}
+
+.footer-section p {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.footer-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ffbb55;
+  margin: 10px 0 20px 0;
 }
