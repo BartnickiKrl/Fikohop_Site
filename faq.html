@@ -14,5 +14,134 @@
             <a href="bilety.html">Bilety</a>
             <a href="faq.html">FAQ</a>
         </nav>
+        <div class="questions"> 
+            <div class="title"><a href="#">Czy znajde darmowy parking?</a></div> 
+            <div class="myText">Tak parking jest darmowy dla osób z ważnym biletem dobowym</div> 
+            <div class="title"><a href="#">Czy </a></div> 
+            <div class="myText">Nie</div> 
+            <div class="title"><a href="#">Pytanie #3</a></div> 
+            <div class="myText">W przyszłości</div> 
+        </div>
+        <h2>Nie znalazłeś pytania którego szukałeś? Zadaj własne pytanie poniżej:</h2>
+        <div class="form-wrapper">
+            <from>
+                <fieldset>
+                <legend> <h2>Wypełnij formularz a nasza obsługa odezwie się w ciągu 24h</h2></legend>
+                <label class="label">Temat</label><br> 
+                <select size="1" name="opcja_tylko">
+                        <option vaule="0">Wybierz najlepiej pasujący temat pytania</option>
+                        <option vaule="2">Ceny biletów</option>
+                        <option vaule="3">Dostepność</option>
+                        <option vaule="4">Godziny otwarcia</option>
+                        <option vaule="5">Zwroty</option>
+                        <option vaule="6">Informacje o atrakcjach</option>
+                        <option vaule="7">Inne</option>
+                </select>
+                <br><br>
+                <label class="label">Zadaj pytanie</label><br> 
+                <textarea placeholder="Opisz swój problem" rows="10" cols="30"></textarea>
+                <br><br>
+                <label class="label">Adres email (tam powiadomimy cię gdy nasza obsługa odpowie na to pytanie)</label><br> 
+                <input type="text" placeholder="Wpisz email" name="uname" required> 
+                
+                <br><br>
+                <button type="submit">Wyslij</button> 
+                <br> 
+                </fieldset>
+            </from>
+        </div>
+        <style>
+            .questions {
+                margin-top: 30px;
+                font-weight: bold;
+            }
+            .title a {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                padding: 30px;
+                border: solid 2px;
+                background-color: aliceblue;
+            }
+            .myText {
+                display: none;
+            }
+            .myText.active {
+                padding: 20px;
+                display: flex;
+                border: solid 2px;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(231, 214, 220);
+            }
+
+
+            .form-wrapper {
+                width: 85vw;
+                max-width: none;
+                padding: 20px;
+                padding-top: 0px;
+            }
+            fieldset {
+                width: 100%;
+                padding: 30px;
+                padding-top: 10px;
+                border-radius: 12px;
+                border: 2px solid #000000;
+            }
+            label {
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+            input,
+            select,
+            textarea {
+                width: 100%;       
+                max-width: 100%;  
+                font-size: 1.2rem;
+                padding: 12px;    
+                margin-top: 8px;
+                margin-bottom: 16px;
+                font-family: inherit;
+                border-radius: 5px;
+                border: 1px solid;
+            }
+            button {
+                width: 100%;       
+                max-width: 20%;  
+                font-size: 1.2rem;
+                padding: 12px;    
+                margin-top: 8px;
+                margin-bottom: 16px;
+                font-family: inherit;
+                border-radius: 5px;
+                border: 1px solid;
+            }
+            
+
+        </style>
+        <script>
+            const title = document.querySelectorAll('.title'); 
+            const text = document.querySelectorAll('.myText'); 
+            title.forEach((el) => { 
+            el.addEventListener('click', (e) =>{
+                    if( el.nextElementSibling.classList.contains('active') )
+                    {
+                        remover();
+                    }
+                    else 
+                    {
+                        console.log(el.nextElementSibling); 
+                        remover(); 
+                        el.nextElementSibling.classList.add('active'); 
+                    }
+                }) 
+            }); 
+            function remover() { 
+                text.forEach((ele) => { 
+                    ele.classList.remove('active'); 
+                });
+            }
+        </script>
     </body>
 </html>
