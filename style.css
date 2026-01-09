@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 body {
-    background-color: #ffcccc;
+    background-color: #fff;
 }
 header {
-    background-image: url("img/zdjheaderinne.png");
-    background-repeat: no-repeat;
+    /* background-image: url("img/zdjheaderinne.png");
+    background-repeat: no-repeat; */
+    background-color: aliceblue;
     background-position: center;
     background-size: cover;
 
     height: 150px;
-    background-image: #aabbff;
 
     display: flex;
     align-items: flex-end;      /* dół */
@@ -25,7 +25,7 @@ header h1 {
     font-family: 'Fredoka One', sans-serif;
     font-size: 5rem;       
     color: #1a1a4b;            
-    text-shadow: 4px 4px 2px rgb(255,255,255); 
+    text-shadow: 2px 2px 2px #3c3c6d; 
     text-align: center;
 }
 h1 {
@@ -55,17 +55,16 @@ nav a {
     width: 100%;
     padding: 30px;
     height: 50px;
-    border: solid 2px #ffbbbb;
+    border: solid 2px #fff;
 
     transition: 0.3s;
 }
 nav a:hover{
-    background-color: #aabbff;
-    color: #000;
-    border: none;
+    background-color: #1a1a4b;
+    color: aliceblue;
 }
 nav a:active {
-    background-color: #aabbff;
+    background-color: #1a1a4b;
     border-radius: 10px;
     color: #fff;
 }
