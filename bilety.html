@@ -4,6 +4,53 @@
         <title>FIKOHOP TICKETS</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        
+        <style>
+            .form-wrapper {
+                width: 85vw;
+                max-width: none;
+                padding: 20px;
+                padding-top: 0px;
+                align-items: center;
+                justify-content: center;
+            }
+            fieldset {
+                width: 92%;
+                padding: 30px;
+                padding-top: 10px;
+                border-radius: 12px;
+                border: 2px solid #000000;
+            }
+            label {
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+            input,
+            select,
+            textarea {
+                width: 95%;       
+                max-width: 95%;  
+                font-size: 1.2rem;
+                padding: 12px;    
+                margin-top: 8px;
+                margin-bottom: 16px;
+                font-family: inherit;
+                border-radius: 5px;
+                border: 1px solid;
+            }
+            button {
+                width: 100%;       
+                max-width: 20%;  
+                font-size: 1.2rem;
+                padding: 12px;    
+                margin-top: 8px;
+                margin-bottom: 16px;
+                font-family: inherit;
+                border-radius: 5px;
+                border: 1px solid;
+            }
+        </style>
+    
     </head>
     <body>
         <header><h1>FIKOHOP</h1></header>
@@ -14,6 +61,105 @@
             <a href="bilety.html">Bilety</a>
             <a href="faq.html">FAQ</a>
         </nav>
+
+        <h2>Wybierz czas pobytu:</h2>
+        <button class="ticket_type" onclick="Pick(this, 30)">1.5h - 30zł/os</button> <button class="ticket_type" onclick="Pick(this, 50)">3h - 50zł/os</button> <button class="ticket_type" onclick="Pick(this, 70)">Dobowy - 70zł/os</button>
+        <br>
+        <h2>Podaj swoje dane oraz do 5 osób towarzyszących i wybierz odpowiednie zniżki:</h2>
+        <div id="people-container">
+            <div class="person" data-index="1">
+                <fieldset>
+                    <legend><h2>Uzupełnij swoje dane</h2></legend>
+                    <label>Dane osobowe:</label><br><br>
+                    <input type="text" placeholder="Imię" name="name[]" required><br>
+                    <input type="text" placeholder="Nazwisko" name="uname[]" required><br>
+                    <input type="number" placeholder="Wiek" name="age[]" required><br>
+                    <input type="email" placeholder="Email" name="email" class="email" required><br><br>
+
+                    <label>Zniżki:</label><br><br> 
+                    <select name="znizki[]">
+                        <option value="100">Bez zniżki</option>
+                        <option value="70">30% - Student</option>
+                        <option value="50">50% - Uczeń</option>
+                        <option value="25">75% - Senior 65+</option>
+                        <option value="55%">45% - Osoba niepełnosprawna</option>
+                        <option value="50%">50% - Opiekun wycieczki</option>
+                    </select>
+                </fieldset>
+            </div>
+        </div>
+
+        <br>
+        <button id="add-person">Dodaj osobę</button>
+        <button id="remove-person">Usuń osobę</button>
+        <button id="count" onclick="Money()">Zlicz</button>
+
+        <br>
+        <h2 id="Koszt">RAZEM 0zł</h2>
+        <button id="payment">Przejdź do płatności</button>
+        
+        <script>
+            let cena = 0
+            const maxPeople = 6;
+            const container = document.getElementById('people-container');
+            const addBtn = document.getElementById('add-person');
+            const removeBtn = document.getElementById('remove-person');
+
+            addBtn.addEventListener('click', () => {
+                const currentPeople = container.querySelectorAll('.person').length;
+                if(currentPeople < maxPeople){
+                    const firstPerson = container.querySelector('.person');
+                    const newPerson = firstPerson.cloneNode(true);
+                    newPerson.querySelector('.email').style.display = 'none';
+                    newPerson.dataset.index = currentPeople + 1;
+                    newPerson.querySelector('legend h2').textContent = `Uzupełnij dane osoby ${currentPeople + 1}`;
+                    newPerson.querySelectorAll('input').forEach(input => input.value = '');
+                    container.appendChild(newPerson);
+                } else {
+                    alert("Możesz dodać maksymalnie 6 osób");
+                }
+            });
+
+            removeBtn.addEventListener('click', () => {
+                const people = container.querySelectorAll('.person');
+                if(people.length > 1){
+                    container.removeChild(people[people.length - 1]);
+                } else {
+                    alert("Musisz mieć przynajmniej jedną osobę");
+                }
+            });
+            
+            function Money() { 
+                const osoby = document.querySelectorAll('.person');   
+                
+                const znizki = Array.from(osoby).map(person => {
+                    return person.querySelector('select[name="znizki[]"]').value;
+                });
+                let kosztCalkowity = 0;
+
+                // Pętla for, która mnoży cenę przez każdą zniżke
+                for (let i = 0; i < znizki.length; i++) {
+                    kosztCalkowity += cena * Number(znizki[i])/100;
+                }
+
+                document.getElementById('Koszt').textContent = `RAZEM ${kosztCalkowity}zł`;
+            }     
+
+            function Pick(self, koszt) {
+                cena = koszt;
+                unPick();
+                self.style.background = '#1a1a4b';
+                self.style.color = 'white';
+            }
+            function unPick() {
+                document.querySelectorAll('.ticket_type').forEach(ele => {
+                    ele.style.background = 'aliceblue';
+                    ele.style.color = 'black';
+                });
+            }
+        </script>
+
+
         <footer>
             <div class="footer-container">
                 <div class="footer-section">
