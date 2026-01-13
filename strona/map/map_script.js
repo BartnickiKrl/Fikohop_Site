@@ -12,14 +12,14 @@ document.querySelectorAll('.icons figure').forEach(figure => {
     });
 });
 
-function showMore(name) {
-    document.getElementById(name).style.display = "flex";
+function showMore(nameInfo) {
+    document.getElementById(nameInfo).style.display = "flex";
     document.getElementById("Infobackground").style.display = "block";
     document.body.classList.add("no-scroll");
 }
 
-function hideMore(name) {
-    document.getElementById(name).style.display = "none";
+function hideMore(nameInfo) {
+    document.getElementById(nameInfo).style.display = "none";
     document.getElementById("Infobackground").style.display = "none";
     document.body.classList.remove("no-scroll");
 }
