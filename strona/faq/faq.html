@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIKOHOP FAQ</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/strona/style.css">
+        <link rel="stylesheet" href="faq_style.css">
+        <script src="faq_script.js" defer></script>
+    </head>
+    
+    <body>
+        <header><h1>FIKOHOP</h1></header>
+        <div class="sticky">
+            <nav>
+                <a href="/strona/main/main.html">Strona główna</a>
+                <a href="/strona/map/map.html">Atrakcje</a>
+                <a href="/strona/bilety/bilety.html">Bilety</a>
+                <a href="/strona/faq/faq.html">FAQ</a>
+            </nav>
+        </div>
+        <h1>FAQ - Często zadawane pytania</h1>
+        <br>
+        <h2>Najpopularniejsze pytania:</h2>
+        <div class="questions"> 
+            <div class="title"><a href="#">Czy znajde darmowy parking?</a></div> 
+            <div class="myText">Tak parking jest darmowy dla osób z ważnym biletem dobowym</div> 
+            <div class="title"><a href="#">Czy jest szatnia ?</a></div> 
+            <div class="myText">Nie</div> 
+            <div class="title"><a href="#">Czy jeżeli kupiłem/am bilet ale nie mogę przyjechać to mogę dokonać zwrotu za 100% poniesionej kwoty.</a></div> 
+            <div class="myText">Nie, niestety nasz park nie oferuje zwrotów dlatego prosimy o przemyślane zakupy</div> 
+        </div>
+
+        <br>
+        <h2>Jeżeli nie znalazłeś swojego pytania powyżej zadaj własne:</h2>
+        <div class="form-wrapper">
+            <form action="/action_page.php">
+                <fieldset>
+                <legend> <h2>Wypełnij formularz a nasza obsługa odezwie się w ciągu 24h</h2></legend>
+                <label class="label">Temat</label><br> 
+                <select size="1" name="opcja_tylko">
+                        <option vaule="0">Wybierz najlepiej pasujący temat pytania</option>
+                        <option vaule="2">Ceny biletów</option>
+                        <option vaule="3">Dostepność</option>
+                        <option vaule="4">Godziny otwarcia</option>
+                        <option vaule="5">Zwroty</option>
+                        <option vaule="6">Informacje o atrakcjach</option>
+                        <option vaule="7">Inne</option>
+                </select>
+                <br><br>
+                <label class="label">Zadaj pytanie</label><br> 
+                <textarea placeholder="Opisz swój problem" rows="10" cols="30"></textarea>
+                <br><br>
+                <label class="label">Adres email (tam powiadomimy cię gdy nasza obsługa odpowie na to pytanie)</label><br> 
+                <input type="email" placeholder="Wpisz email" name="uname" required> 
+                
+                <br><br>
+                <button type="submit">Wyslij</button> 
+                <br> 
+                </fieldset>
+            </form>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h2>FIKOHOP</h2>
+                    <p>&copy; 2026 Park rozrywki Fikohop</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Godziny otwarcia</h3>
+                    <p>Pon-Pt: 09:00 - 21:00</p>
+                    <p>Sob-Nd: 10:00 - 22:00</p>
+                </div>
+                <div class="footer-section">
+                <h3>Kontakt 24h</h3>
+                    <p>Telefon: +48 123 456 789</p>
+                    <p>Email: kontakt@fikohop.pl</p>
+                    <p>Adres: ul. Wesoła 15, 00-001 Warszawa</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

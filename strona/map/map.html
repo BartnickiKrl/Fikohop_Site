@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FIKOHOP MAP</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/strona/style.css">
+        <link rel="stylesheet" href="map_style.css">
+        <script src="map_script.js" defer></script>
+
+    </head>
+
+    <body>
+        <header><h1>FIKOHOP</h1></header>
+        <div class="sticky">
+            <nav>
+                <a href="/strona/main/main.html">Strona główna</a>
+                <a href="/strona/map/map.html">Atrakcje</a>
+                <a href="/strona/bilety/bilety.html">Bilety</a>
+                <a href="/strona/faq/faq.html">FAQ</a>
+            </nav>
+        </div>
+        <h1>Poznaj wszystkie atrakcje na interaktywnej mapie parku</h1>
+        
+        <div class="map">
+            <img id="map" src="/strona/img/mapkapoprawiona.png" alt="map" width="100%">
+            <div class="icons">
+                <figure id="mlyn">
+                    <img src="/strona/img/diabelskimlynbt.png" alt="mlyn">
+                    <figcaption>
+                        <h2>Dziabelski młyn</h2>
+                        <img class="figcaption_img" src="/strona/img/przykladowe_zdj.jpg" alt="mlyn">
+                        <br>
+                        <button onclick="showMore('mlynInfo')">Dowiedz się więcej...</button>
+                    </figcaption>
+                </figure>
+                <figure id="strachy">
+                    <img src="/strona/img/domstrachowbt.png" alt="strachy">
+                    <figcaption>
+                        <h2>Dom strachów</h2>
+                        <img class="figcaption_img" src="/strona/img/przykladowe_zdj.jpg" alt="strachy">
+                        <br>
+                        <button onclick="showMore('strachyInfo')">Dowiedz się więcej...</button>
+                    </figcaption>
+                </figure>
+                <figure id="gokarty">
+                    <img src="/strona/img/gokartybt.png" alt="gokarty">
+                    <figcaption>
+                        <h2>Gokarty</h2>
+                        <img class="figcaption_img" src="/strona/img/przykladowe_zdj.jpg" alt="gokarty">
+                        <br>
+                        <button onclick="showMore('gokartyInfo')">Dowiedz się więcej...</button>
+                    </figcaption>
+                </figure>
+                <figure id="hustawka">
+                    <img src="/strona/img/huśtawka.png" alt="hustawka">
+                    <figcaption>
+                        <h2>Huśtawka</h2>
+                        <img class="figcaption_img" src="/strona/img/przykladowe_zdj.jpg" alt="hustawka">
+                        <br>
+                        <button onclick="showMore('hustawkaInfo')">Dowiedz się więcej...</button>
+                    </figcaption>
+                </figure>
+                <figure id="karuzela">
+                    <img src="/strona/img/karuzelabt.png" alt="karuzela">
+                    <figcaption>
+                        <h2>Karuzela</h2>
+                        <img class="figcaption_img" src="/strona/img/przykladowe_zdj.jpg" alt="karuzela">
+                        <br>
+                        <button onclick="showMore('karuzelaInfo')">Dowiedz się więcej...</button>
+                    </figcaption>
+                </figure>
+                <figure id="kolejka">
+                    <img src="/strona/img/kolejkabt.png" alt="kolejka">
+                    <figcaption>
+                        <h2>Kolejka</h2>
+                        <img class="figcaption_img" src="/strona/img/przykladowe_zdj.jpg" alt="kolejka">
+                        <br>
+                        <button onclick="showMore('kolejkaInfo')">Dowiedz się więcej...</button>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div id="Infobackground" class="overlay">
+            <figure id="mlynInfo" class="popup">
+                <button class="x" onclick="hideMore('mlynInfo')">X</button>
+                <h1>Dziabelski młyn</h1>
+                <div class="gallery">
+                    <button onclick="previous('mlyn')" class="x"><</button>
+                    <img class="mlyn active" src="/strona/img/przykladowe_zdj.jpg" alt="mlyn" >
+                    <img class="mlyn" src="/strona/img/diabelskimlynbt.png" alt="mlyn" >
+                    <img class="mlyn" src="/strona/img/mapkapoprawiona.png" alt="mlyn" >
+                    <button onclick="next('mlyn')" class="x">></button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum, ullam ipsum quia similique cumque autem culpa? Non similique suscipit sunt? Dolor asperiores necessitatibus nesciunt omnis numquam. Sapiente, voluptate saepe.</p>
+            </figure>
+            <figure id="strachyInfo" class="popup">
+                <button class="x" onclick="hideMore('strachyInfo')">X</button>
+                <h1>Dziabelski młyn</h1>
+                <div class="gallery">
+                    <button onclick="previous('strachy')" class="x"><</button>
+                    <img class="strachy active" src="/strona/img/przykladowe_zdj.jpg" alt="strachy" >
+                    <img class="strachy" src="/strona/img/domstrachowbt.png" alt="strachy" >
+                    <img class="strachy" src="/strona/img/mapkapoprawiona.png" alt="strachy" >
+                    <button onclick="next('strachy')" class="x">></button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum, ullam ipsum quia similique cumque autem culpa? Non similique suscipit sunt? Dolor asperiores necessitatibus nesciunt omnis numquam. Sapiente, voluptate saepe.</p>
+            </figure>
+            <figure id="gokartyInfo" class="popup">
+                <button class="x" onclick="hideMore('gokartyInfo')">X</button>
+                <h1>Gokarty</h1>
+                <div class="gallery">
+                    <button onclick="previous('gokarty')" class="x"><</button>
+                    <img class="gokarty active" src="/strona/img/przykladowe_zdj.jpg" alt="gokarty" >
+                    <img class="gokarty" src="/strona/img/gokartybt.png" alt="gokarty" >
+                    <img class="gokarty" src="/strona/img/mapkapoprawiona.png" alt="gokarty" >
+                    <button onclick="next('gokarty')" class="x">></button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum, ullam ipsum quia similique cumque autem culpa? Non similique suscipit sunt? Dolor asperiores necessitatibus nesciunt omnis numquam. Sapiente, voluptate saepe.</p>
+            </figure>
+            <figure id="hustawkaInfo" class="popup">
+                <button class="x" onclick="hideMore('hustawkaInfo')">X</button>
+                <h1>Huśtawka</h1>
+                <div class="gallery">
+                    <button onclick="previous('hustawka')" class="x"><</button>
+                    <img class="hustawka active" src="/strona/img/przykladowe_zdj.jpg" alt="hustawka" >
+                    <img class="hustawka" src="/strona/img/huśtawka.png" alt="hustawka" >
+                    <img class="hustawka" src="/strona/img/mapkapoprawiona.png" alt="hustawka" >
+                    <button onclick="next('hustawka')" class="x">></button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum, ullam ipsum quia similique cumque autem culpa? Non similique suscipit sunt? Dolor asperiores necessitatibus nesciunt omnis numquam. Sapiente, voluptate saepe.</p>
+            </figure>
+            <figure id="karuzelaInfo" class="popup">
+                <button class="x" onclick="hideMore('karuzelaInfo')">X</button>
+                <h1>Karuzela</h1>
+                <div class="gallery">
+                    <button onclick="previous('karuzela')" class="x"><</button>
+                    <img class="karuzela active" src="/strona/img/przykladowe_zdj.jpg" alt="karuzela" >
+                    <img class="karuzela" src="/strona/img/karuzelabt.png" alt="karuzela" >
+                    <img class="karuzela" src="/strona/img/mapkapoprawiona.png" alt="karuzela" >
+                    <button onclick="next('karuzela')" class="x">></button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum, ullam ipsum quia similique cumque autem culpa? Non similique suscipit sunt? Dolor asperiores necessitatibus nesciunt omnis numquam. Sapiente, voluptate saepe.</p>
+            </figure>
+            <figure id="kolejkaInfo" class="popup">
+                <button class="x" onclick="hideMore('kolejkaInfo')">X</button>
+                <h1>Kolejka</h1>
+                <div class="gallery">
+                    <button onclick="previous('kolejka')" class="x"><</button>
+                    <img class="kolejka active" src="/strona/img/przykladowe_zdj.jpg" alt="kolejka" >
+                    <img class="kolejka" src="/strona/img/kolejkabt.png" alt="kolejka" >
+                    <img class="kolejka" src="/strona/img/mapkapoprawiona.png" alt="kolejka">
+                    <button onclick="next('kolejka')" class="x">></button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum, ullam ipsum quia similique cumque autem culpa? Non similique suscipit sunt? Dolor asperiores necessitatibus nesciunt omnis numquam. Sapiente, voluptate saepe.</p>
+            </figure>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h2>FIKOHOP</h2>
+                    <p>&copy; 2026 Park rozrywki Fikohop</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Godziny otwarcia</h3>
+                    <p>Pon-Pt: 09:00 - 21:00</p>
+                    <p>Sob-Nd: 10:00 - 22:00</p>
+                </div>
+                <div class="footer-section">
+                <h3>Kontakt 24h</h3>
+                    <p>Telefon: +48 123 456 789</p>
+                    <p>Email: kontakt@fikohop.pl</p>
+                    <p>Adres: ul. Wesoła 15, 00-001 Warszawa</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

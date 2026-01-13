@@ -1,0 +1,73 @@
+ button:hover {
+    color: #fff;
+    background-color: #1a1a4b;
+}
+.questions {
+    margin-top: 30px;
+    font-weight: bold;
+}
+.title a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 30px;
+    border: solid 2px;
+    background-color: aliceblue;
+}
+.myText {
+    display: none;
+}
+.myText.active {
+    padding: 20px;
+    display: flex;
+    border: solid 2px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a4b;
+    color: #fff;
+}
+
+
+.form-wrapper {
+    width: 85vw;
+    max-width: none;
+    padding: 20px;
+    padding-top: 0px;
+    align-items: center;
+    justify-content: center;
+}
+fieldset {
+    width: 95%;
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 12px;
+    border: 2px solid #000000;
+}
+label {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+input,
+select,
+textarea {
+    width: 100%;       
+    max-width: 100%;  
+    font-size: 1.2rem;
+    padding: 12px;    
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 1px solid;
+}
+button {
+    width: 100%;       
+    max-width: 20%;  
+    font-size: 1.2rem;
+    padding: 12px;    
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 1px solid;
+}
