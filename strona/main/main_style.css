@@ -19,7 +19,9 @@ header {
   font-size: 1.5em;
   padding-left: 30px;
   padding-bottom: 0px;
-  margin-bottom: 12px;
+  margin-bottom: 1111px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 header h1 {
   font-family: 'Fredoka One', sans-serif;
@@ -38,7 +40,6 @@ nav {
   min-width: 240px;
   height: 100vh;
   background-color: aliceblue;
-  border-radius: 10px;
   text-shadow: 1px 1px 2px black;
 
   padding: 15px;
@@ -49,6 +50,7 @@ nav {
 
   position: sticky;
   top: 0;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 nav a {
@@ -63,16 +65,14 @@ nav a {
   height: 100px;
   width: 100%;
 
-  transition: 0.8s;
+  transition: 0.6s;
 }
 nav a:hover{
   background-color: #1a1a4b;
-  border-radius: 10px;
   color: #fff;
 }
 nav a:active {
   background-color: #1a1a4b;
-  border-radius: 10px;
   color: #fff;
 }
 #container {
@@ -84,11 +84,11 @@ nav a:active {
   display: flex;
   flex-direction: column;
   gap: 30px;
-
 }
 .article {
   background-color: aliceblue;
   padding: 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 .article h2 {
   text-align: center;
