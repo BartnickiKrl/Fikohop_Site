@@ -2,6 +2,7 @@ const title = document.querySelectorAll('.title');
 const text = document.querySelectorAll('.myText'); 
 title.forEach((el) => { 
 el.addEventListener('click', (e) =>{
+        e.preventDefault()
         if( el.nextElementSibling.classList.contains('active') )
         {
             remover();

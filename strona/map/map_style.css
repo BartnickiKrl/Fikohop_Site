@@ -32,18 +32,13 @@
     z-index: 1;
 } 
 
-
 .icons figure:hover > img {
     transform: scale(1.3);
 }
 
-
-
-
 .icons figure:hover {
     z-index: 19;
 }
-
 
 .icons figure figcaption {
     position: absolute;
@@ -71,7 +66,7 @@
     padding-bottom: 5px;
     gap: 10px;
 }
-.icons figure figcaption.left {
+.icons figure figcaption.left { 
     position: absolute;
     top: 50%;
     left: auto;
@@ -80,8 +75,23 @@
     display: none;
 
     width: 300px;
-    height: 404px;
-    background-color: #1a1a4b;
+    height: 400px;
+    background-color: aliceblue;
+    border: #1a1a4b solid 2px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+
+    pointer-events: auto;
+    z-index: 20;
+    
+    padding: auto;
+    padding-bottom: 5px;
+    gap: 10px;
 }
 .icons figure:hover figcaption,
 .icons figure figcaption:hover {
@@ -99,7 +109,7 @@
     max-width: 250px;
     margin-top: 20px;
 }
-/*
+
 button {
     width: 100%;       
     max-width: 80%;  
@@ -115,8 +125,6 @@ button:hover {
     color: #fff;
     background-color: #1a1a4b;
 }
-*/
-* { box-sizing: border-box; }
 
 .icons figure figcaption{
     width: 300px;
@@ -133,38 +141,6 @@ button:hover {
     object-fit: cover;
     margin-top: 10px;
     border-radius: 8px;
-}
-
-
-.more-btn{
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid;
-    cursor: pointer;
-    margin-top: auto; 
-}
-.more-btn:hover{
-    color: #fff;
-    background-color: #1a1a4b;
-}
-
-
-.close-btn{
-    width: 44px;
-    height: 44px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 1px solid;
-}
-
-.nav-btn{
-    width: 44px;
-    height: 44px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 1px solid;
 }
 
 
@@ -208,7 +184,7 @@ body.no-scroll {
 }
 .gallery {
     display: flex;
-    align-items: center;       /* wyśrodkowanie pionowe */
+    align-items: center;     
     justify-content: center;
     gap: 20px;
     width: 100%;
@@ -224,4 +200,77 @@ body.no-scroll {
 
 .gallery img.active {
     display: block;
+}
+
+@media (max-width: 700px) {
+
+    .icons figure figcaption,
+    .icons figure figcaption.left {
+
+        width: 200px;
+        padding: 10px;
+        gap: 6px;
+
+        position: absolute;
+        top: calc(100% - 6px);  
+        left: 50%;
+        transform: translateX(-50%);
+
+        margin-top: 0;
+
+        height: auto;
+        min-height: auto;
+    }
+
+    .icons figure:hover figcaption,
+    .icons figure figcaption:hover {
+        display: flex;
+    }
+
+    .figcaption_img {
+        height: 120px;
+    }
+
+
+    .icons {
+        transform: translateX(-4%);
+    }
+    .icons figure {
+        width: 12% !important;
+        min-width: 40px;
+    }
+
+    .icons figure img {
+        width: 100%;
+        min-width: 40px;
+    }
+
+
+    .icons figure:hover > img {
+        transform: scale(1.05);
+    }
+    
+    .popup {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        width: calc(100% - 20px);
+        max-width: none;
+
+        margin: 0;
+        padding: 12px;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .icons {
+        transform: translateX(-10%);
+    }
+}
+
+@media (max-width: 320px) {
+    .icons {
+        transform: translateX(-15%);
+    }
 }

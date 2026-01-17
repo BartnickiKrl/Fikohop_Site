@@ -36,8 +36,8 @@ h1 {
 nav {
   display: flex;
   flex-direction: column;
-  width: 15%;
-  min-width: 240px;
+  width: 30%;
+  max-width: 240px;
   height: 100vh;
   background-color: aliceblue;
   text-shadow: 1px 1px 2px black;
@@ -149,4 +149,159 @@ footer {
   border-radius: 18px;
   display: block;
   margin: 15px auto;
+}
+
+
+
+@media (max-width: 1000px) {
+
+  header {
+    height: 100px;
+    padding-left: 15px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  nav {
+    width: 30%;          
+    min-width: 18%;      
+    padding: 1vw;         
+  }
+
+  nav a {
+    font-size: 2.5vw;    
+    height: auto;        
+    padding: 1.5vw 0;    
+  }
+
+  #container {
+    gap: 2vw;           
+  }
+
+  #articles {
+    gap: 2vw;
+  }
+
+  .article {
+    padding: 2vw;     
+  }
+
+  .article h2 {
+    font-size: 3vw;   
+  }
+
+  .article p {
+    font-size: 1.5vw;    
+    line-height: 1.4;
+  }
+
+  .article img {
+    height: auto;     
+    width: 100%;          
+    border-radius: 1vw;    
+  }
+}
+
+
+@media (max-width: 860px) {
+
+  header {
+    height: 100px;
+    padding-left: 15px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;     
+    width: 100%;               
+    max-width: 100%;
+    height: auto;           
+    margin: 0 0 20px 0;         
+    padding: 0;              
+    gap: 10px;                  
+    align-items: stretch;       
+    position: relative;       
+    top: 0;                      
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+  }
+
+  nav a {
+    flex: none;               
+    width: 100%;               
+    height: 5%;
+    font-size: 1.2rem;
+    padding: 12px;
+    margin: 0;
+    text-align: center;
+    background-color: aliceblue;
+    color: #1a1a4b;
+    text-decoration: none;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+    transition: 0.5s;
+  }
+
+  nav a:hover {
+    background-color: #1a1a4b;
+    color: aliceblue;
+  }
+
+  nav a:active {
+    background-color: #1a1a4b;
+    color: #fff;
+  }
+
+  #container {
+    flex-direction: column; 
+    gap: 20px;
+  }
+
+  .article p {
+    font-size: 1rem;
+    line-height: 1.5; 
+  }
+
+  .article h2 {
+    font-size: 1.8rem;   
+  }
+}
+
+@media (max-width: 500px) {
+
+  header {
+    height: 80px;        
+    padding-left: 10px; 
+  }
+
+  header h1 {
+    font-size: 2rem;    
+    text-align: center;  
+  }
+}
+
+
+@media (max-width: 300px) {
+  header {
+    height: 60px;       
+    padding-left: 5px;  
+  }
+
+  header h1 {
+      font-size: 1.5rem;   
+    text-align: center;  
+  }
+  
+  .article p {
+    font-size: 0.95rem;  
+    line-height: 1.4;
+  }
+  .article h2 {
+    font-size: 1.6rem;  
+  }
 }
