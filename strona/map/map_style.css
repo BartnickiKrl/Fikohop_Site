@@ -14,6 +14,8 @@
     inset: 0; /* top:0; right:0; bottom:0; left:0 */
 }
 
+
+
 .icons figure {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -28,14 +30,20 @@
     min-width: 80px;
     transition: transform 0.2s ease;
     z-index: 1;
+} 
+
+
+.icons figure:hover > img {
+    transform: scale(1.3);
 }
+
+
+
+
 .icons figure:hover {
     z-index: 19;
 }
 
-.icons figure:hover img {
-    transform: scale(1.3);
-}
 
 .icons figure figcaption {
     position: absolute;
@@ -79,7 +87,6 @@
 .icons figure figcaption:hover {
     display: flex;
 }
-
 #mlyn { top: 17%; left: 33%; width: 25%; }
 #strachy { top: 56%; left: 57%; width: 6%; }
 #gokarty { top: 55%; left: 35%; width: 18%; }
@@ -92,7 +99,7 @@
     max-width: 250px;
     margin-top: 20px;
 }
-
+/*
 button {
     width: 100%;       
     max-width: 80%;  
@@ -108,7 +115,60 @@ button:hover {
     color: #fff;
     background-color: #1a1a4b;
 }
+*/
+* { box-sizing: border-box; }
 
+.icons figure figcaption{
+    width: 300px;
+    min-height: 360px;    
+    height: auto;
+    padding: 14px; 
+    gap: 12px;
+}
+
+.figcaption_img{
+    width: 100% !important;
+    max-width: none;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+
+.more-btn{
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid;
+    cursor: pointer;
+    margin-top: auto; 
+}
+.more-btn:hover{
+    color: #fff;
+    background-color: #1a1a4b;
+}
+
+
+.close-btn{
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.nav-btn{
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+
+.gallery{ height: 340px; }
 .overlay {
     position: fixed;
     inset: 0;
